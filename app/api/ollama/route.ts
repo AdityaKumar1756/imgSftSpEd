@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
     const data = await res.json();
     return NextResponse.json({ response: data.response });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: "Failed to fetch response" }, { status: 500 });
   }
 }

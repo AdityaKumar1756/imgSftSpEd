@@ -2,7 +2,6 @@
 import { useState } from 'react';
 
 type PromptProps = {
-  mode: React.CSSProperties;
   sendPrompt: (prompt: string, fileContent: string) => void;
   response: string;
   handleFileChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -11,7 +10,7 @@ type PromptProps = {
   fileContent: string;
 };
 
-export default function Prompt({ mode, sendPrompt, response, handleFileChange, fileName, clearFileName, fileContent }: PromptProps) {
+export default function Prompt({ sendPrompt, response, handleFileChange, fileName, clearFileName, fileContent }: PromptProps) {
   const [prompt, setPrompt] = useState('');
 
   const handleSend = () => {

@@ -76,12 +76,14 @@ export default function Home() {
     color: "white",
   });
 
+  setMode(mode);
+
   return (
     <>
       <div style={{ backgroundColor: "#323131" }} className="min-h-screen" >
         <Navbar mode={mode} />
         <div style={{ marginTop: 100 }}>
-          <Prompt mode={mode} sendPrompt={sendPrompt} response={response} handleFileChange={handleFileChange} fileName={fileName} clearFileName={clearFileName} fileContent={fileContent} />
+          <Prompt sendPrompt={sendPrompt} response={response} handleFileChange={handleFileChange} fileName={fileName} clearFileName={clearFileName} fileContent={fileContent} />
         </div>
       </div>
     </>
