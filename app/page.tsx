@@ -71,12 +71,10 @@ export default function Home() {
     setFileContent("");
   };
 
-  const [mode, setMode] = useState({
+  const [mode] = useState({
     backgroundColor: "black",
     color: "white",
   });
-
-  setMode(mode);
 
   return (
     <>
