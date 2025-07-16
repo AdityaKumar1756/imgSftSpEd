@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Navbar from "./Components/Navbar";
 import Prompt from "./Components/Prompt";
+import { Content } from "next/font/google";
 
 export default function Home() {
 
@@ -50,6 +51,10 @@ export default function Home() {
 
         const result = await response.json();
         console.log("Server response:", result);
+
+        if (result.content) {
+          setFileContent(result.content);
+        }
       }
       else {
         const reader = new FileReader();
